@@ -11,7 +11,6 @@ class DrawerWidget extends StatefulWidget {
 }
 
 class _DrawerWidgetState extends State<DrawerWidget> {
-
 //identifica qual item foi selecionado
   int itemSelect = 0;
 
@@ -35,8 +34,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
       leading: Icon(icon),
       onTap: () {
         itemSelect = item;
-        onTap();
-        widget.onTapItem(text);
+        Navigator.pop(context);
       },
       selected: item == itemSelect,
       title: Text(
